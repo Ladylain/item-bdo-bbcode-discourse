@@ -22,7 +22,7 @@
     			   	console.log(urlImage);
     			   	urlImageFinal = urlImage[0];
     			   	console.log(urlImageFinal);
-    			   	return urlImageFinal;
+    			   	url_img = urlImageFinal;
     			}
     	});
       return "<a href=\"http://bddatabase.net/fr/item/"+p1+"\" class=\"item-bdo\"><img src=\"http://bddatabase.net/" + url_img + "\"" + p2 + "</img></a>";

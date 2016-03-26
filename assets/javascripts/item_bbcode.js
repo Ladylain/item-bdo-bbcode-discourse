@@ -3,12 +3,13 @@
   function replaceItemLink (text) {
     while (text != (text = text.replace(/\[item=([^\]]+)\]((?:(?!\[item=[^\]]+\]|\[\/item\])[\S\s])*)\[\/item\]/ig, function (match, p1, p2, offset, string) {
       var url_img; 
+      var urllink = 'http://bddatabase.net/fr/item/'+p1;
       url_img = $.ajax({
     		   url: "http://digitalsky.fr/aelon/get_content.php",
     		   type: "GET",
     		   cache: false,
     		   dataType: 'jsonp',
-    		   data: {url: url},
+    		   data: {url: urllink},
     		   success: function(reponse){
     		   		/*reponse = jQuery.parseJSON(reponse);
     			   	console.log(reponse);  	*/

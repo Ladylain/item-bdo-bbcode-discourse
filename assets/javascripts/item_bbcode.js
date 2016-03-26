@@ -1,5 +1,5 @@
-
-	function url_to_item(item_url){
+(function() {
+function url_to_item(item_url){
 	$('#Main').stop();
 	$('#Main').fadeOut(function(){
 		$('#Main').empty();
@@ -33,6 +33,7 @@
 			   	$('#Main').fadeIn();
 			}
 	});
+}
 /*(function() {
   function replaceItemLink (text) {
     while (text != (text = text.replace(/\[item=([^\]]+)\]((?:(?!\[item=[^\]]+\]|\[\/item\])[\S\s])*)\[\/item\]/ig, function (match, p1, p2, offset, string) {
@@ -51,3 +52,4 @@
 	  return ['a', {'href': '#', 'onmouseenter': 'javascript:url_to_item('+url+')', 'class': 'item-bdo'}].concat(this.processInline(contents));
 	});
 
+})();

@@ -47,6 +47,6 @@ function url_to_item(item_url){
 
 })();*/
 
-	Discourse.BBCode.rawBBCode('item', function(contents) { return ['a', {href: contents, 'class' : 'item-bbcode', 'data-bbcode': true}, contents]; });
+	Discourse.BBCode.rawBBCode('item', function(contents) { return ['a', {href: contents, 'data-bbcode': true}, contents]; });
 
 })();

@@ -1,5 +1,7 @@
+
+
 (function() {
-function url_to_item(item_url){
+	function url_to_item(item_url){
 	$('#Main').stop();
 	$('#Main').fadeOut(function(){
 		$('#Main').empty();
@@ -34,7 +36,6 @@ function url_to_item(item_url){
 			}
 	});
 }
-/*(function() {
   function replaceItemLink (text) {
     while (text != (text = text.replace(/\[item=([^\]]+)\]((?:(?!\[item=[^\]]+\]|\[\/item\])[\S\s])*)\[\/item\]/ig, function (match, p1, p2, offset, string) {
       return "<a href=\"#\" onmouseenter=\"javascript:url_to_item('"+p1+"')\" class=\"item-bdo\">" + p2 + "</a>";
@@ -44,9 +45,5 @@ function url_to_item(item_url){
 
   Discourse.Dialect.addPreProcessor(replaceItemLink);
   Discourse.Markdown.whiteListTag('a', 'href', 'onmouseenter', 'class');
-
-})();*/
-
-	Discourse.BBCode.rawBBCode('item', function(contents) { return ['a', {href: contents, 'data-bbcode': true}, contents]; });
 
 })();

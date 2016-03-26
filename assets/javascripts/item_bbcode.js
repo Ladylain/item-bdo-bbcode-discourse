@@ -1,5 +1,3 @@
-
-
 (function() {
 	function url_to_item(item_url){
 	$('#Main').stop();
@@ -37,7 +35,7 @@
     return text;
   }
 
-  Discourse.Dialect.addPreProcessor(replaceItemLink);
-  Discourse.Markdown.whiteListTag('a', 'href', '*',  'onmouseenter', '*', 'class', 'item-bdo');
+Discourse.Dialect.addPreProcessor(replaceItemLink);
+Discourse.Markdown.whiteListTag('a', 'class', 'item-bdo');
 
 })();

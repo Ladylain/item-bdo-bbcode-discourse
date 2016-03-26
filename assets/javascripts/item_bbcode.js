@@ -1,4 +1,4 @@
-(function() {
+
 	function url_to_item(item_url){
 	$('#Main').stop();
 	$('#Main').fadeOut(function(){
@@ -51,4 +51,3 @@
 	  return ['a', {'href': '#', 'onmouseenter': 'javascript:url_to_item('+url+')', 'class': 'item-bdo'}].concat(this.processInline(contents));
 	});
 
-})();

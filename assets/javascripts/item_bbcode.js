@@ -47,9 +47,6 @@ function url_to_item(item_url){
 
 })();*/
 
-	Discourse.BBCode.replaceBBCodeParamsRaw('item', function(param, contents) {
-	  var url = param.replace(/(^")|("$)/g, '');
-	  return ['a', {'href': '#', 'onmouseenter': 'javascript:url_to_item('+url+')', 'class': 'item-bdo'}].concat(this.processInline(contents));
-	});
+	Discourse.BBCode.rawBBCode('item', function(contents) { return ['a', {href: contents, 'class' : 'item-bbcode', 'data-bbcode': true}, contents]; });
 
 })();
